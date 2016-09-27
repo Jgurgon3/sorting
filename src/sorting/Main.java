@@ -8,10 +8,11 @@ import java.util.concurrent.Callable;
 public class Main {
 
 	public static void main(String[] args) {
+		System.out.println("Type any string of any length:");
 		Scanner in = new Scanner(System.in);
 
 		String a = in.nextLine();
-
+		
 		String[] b = sToArray(a);
 		selectionSort(b);
 
@@ -20,10 +21,10 @@ public class Main {
 		
 		String[] d = sToArray(a);
 		mergeSort(d);
-		
+
 		String[] e = sToArray(a);
 		heapSort(e);
-		
+
 		in.close();
 
 	}
@@ -83,9 +84,9 @@ public class Main {
 		a = a.replace(" ", "");
 		String[] b = new String[a.length()];
 
-		for (int i = 0; i < a.length(); i++) {
-			b[i] = String.valueOf(a.charAt(i));
-			
+		for (int j = 0; j < a.length(); j++) {
+			b[j] = String.valueOf(a.charAt(j));
+
 		}
 		return new HashSet<String>(Arrays.asList(b)).toArray(new String[0]);
 	}
